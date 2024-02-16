@@ -15,8 +15,21 @@ console.log(rudePerson2("I love dogs")); // prints "I yo love yo dogs"
 
 
 ***********************************************************************/
+//interrupting word goes in between each word
+function interrupter(interruptingWord) {
 
-// Your code here 
+  return function (sentence) {
+    let words = sentence.split(" ");
+    //join them back together, instead of spaces, put the interrupting word
+    let result = words.join(` ${interruptingWord} `);
+
+    return result
+
+  }
+}
+
+let rudePerson2 = interrupter("yo"); // => returns a function
+console.log(rudePerson2("I love dogs")); // prints "I yo love yo dogs"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

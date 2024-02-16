@@ -10,7 +10,9 @@ arrowMirrorArray([1,2,3]); // => [ 1, 2, 3, 3, 2, 1 ]
 arrowMirrorArray(['a', 'b', 'c', 'd']); // => [ 'a', 'b', 'c', 'd', 'd', 'c', 'b', 'a' ]
 ***********************************************************************/
 
-// Your code here 
+// use spread method to expand the array, then keep them in an array.
+//used slice to not alter the original array, and reverse to get the original array in reversed
+const arrowMirrorArray = array => [...array, ...array.slice().reverse()]
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

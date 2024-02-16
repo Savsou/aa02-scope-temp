@@ -13,7 +13,23 @@ function returned by recVolume should continue to return the original volume.
 
 ***********************************************************************/
 
-// Your code here 
+function recVolume(height) {
+  let volume = [height];
+
+  return function (measurement) {
+    volume.push(measurement)
+
+    if (volume.length < 3) {
+      return recVolume();
+    } else {
+      const [height, width, length] = volume;
+      return height * width * length;
+    }
+
+  }
+
+}
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

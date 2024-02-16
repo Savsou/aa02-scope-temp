@@ -43,7 +43,29 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   be useful
 ***********************************************************************/
 
-// Your code here 
+function curriedSum(numArgs) {
+  if (numArgs <= 0) {
+    return null;
+  }
+
+  let numbers = [];
+
+  function _curriedSum(num) {
+    if (num <= 0) {
+      return null;
+    }
+
+    numbers.push(num);
+
+    if (numbers.length === numArgs) {
+      return numbers.reduce((acc, currentNum) => acc + currentNum, 0);
+    } else {
+      return _curriedSum;
+    }
+  }
+
+  return _curriedSum;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
