@@ -12,6 +12,7 @@ arrowRestSum(0); // => 0
 ***********************************************************************/
 
 const arrowRestSum = (...nums) => {
+  //console.log(nums) comes out to be [3, 5, 6]
   let sum = nums.reduce((acc, num) => {
     return acc + num
   }, 0)
@@ -19,6 +20,7 @@ const arrowRestSum = (...nums) => {
   return sum;
 }
 
+//arrowRestSum(3,5,6);
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {

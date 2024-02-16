@@ -20,7 +20,7 @@ function recVolume(height) {
     volume.push(measurement)
 
     if (volume.length < 3) {
-      return recVolume();
+      return recVolume;
     } else {
       const [height, width, length] = volume;
       return height * width * length;
